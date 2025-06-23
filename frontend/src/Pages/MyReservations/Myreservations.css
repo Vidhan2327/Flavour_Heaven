@@ -1,0 +1,108 @@
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to bottom right, #fff1eb, #ace0f9);
+  color: #333;
+}
+
+
+.reservation-checker {
+  max-width: 600px;
+  margin: 60px auto;
+  padding: 40px;
+  background: #ffffffcc;
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  text-align: center;
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+
+.reservation-checker h2 {
+  font-size: 2rem;
+  margin-bottom: 25px;
+  color: #222;
+}
+
+
+.reservation-checker input[type="email"] {
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: 12px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  margin-bottom: 20px;
+  transition: all 0.3s;
+  background: #fefefe;
+}
+
+.reservation-checker input:focus {
+  outline: none;
+  border-color: #4fa1f2;
+  box-shadow: 0 0 0 3px rgba(79, 161, 242, 0.2);
+}
+
+
+.reservation-checker button {
+  padding: 12px 24px;
+  font-size: 1rem;
+  background-color: #4fa1f2;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s;
+  margin-bottom: 30px;
+}
+
+.reservation-checker button:hover {
+  background-color: #357dd3;
+}
+
+/* Reservations List */
+.reservation-checker ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.reservation-checker li {
+  background: #f8fafd;
+  padding: 20px;
+  margin-bottom: 16px;
+  border-left: 5px solid #4fa1f2;
+  border-radius: 12px;
+  text-align: left;
+  transition: transform 0.3s ease;
+}
+
+.reservation-checker li:hover {
+  transform: translateY(-4px);
+  background-color: #f0f7ff;
+}
+
+
+.reservation-checker li strong {
+  color: #222;
+}
+
+
+.reservation-checker p {
+  margin-top: 20px;
+  font-style: italic;
+  color: #777;
+}
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
