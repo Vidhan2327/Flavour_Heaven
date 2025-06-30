@@ -12,21 +12,21 @@ const HeroSection = () => {
           </div>
           <div className="combined_boxes">
             <div className="imageBox">
-              <img src="./hero1.png" alt="hero" />
+              <img src="/res1.png" alt="Delicious Food" loading="lazy" />
             </div>
             <div className="textAndLogo">
               <div className="textWithSvg">
                 <h1 className="title">Food</h1>
                 <h1 className="title dishes_title">Dishes</h1>
-                <img src="./threelines.svg" alt="threelines" />
+                <img src="/threelines.svg" alt="lines" loading="lazy" />
               </div>
-              <img className="logo" src="logo.svg" alt="logo" />
+              <img className="logo" src="/logo.svg" alt="logo" loading="lazy" />
             </div>
           </div>
         </div>
         <div className="banner">
           <div className="imageBox">
-            <img src="hero2.png" alt="hero" />
+            <img src="/res2.png" alt="More Dishes" loading="lazy" />
           </div>
           <h1 className="title dishes_title">Dishes</h1>
         </div>

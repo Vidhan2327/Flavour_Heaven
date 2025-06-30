@@ -10,6 +10,10 @@
 ::-webkit-scrollbar{
   display: none;
 }
+html {
+  scroll-behavior: smooth;
+}
+
 
 /********************** HERO SECTION COMPONENT STYLING **************************/
 /**********************************************************************************************************************/
@@ -64,6 +68,19 @@ nav .navLinks .links a:hover {
   transition: 0.3s;
   cursor: pointer;
 }
+.imageBox img {
+  border-radius: 20px; /* 🎯 round the corners */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* 🌑 soft shadow */
+  transition: transform 0.3s ease;
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+.imageBox img:hover {
+  transform: scale(1.03); /* 🎯 slight zoom on hover */
+}
+
 nav .menuBtn {
   padding: 8px 20px;
   color: black;

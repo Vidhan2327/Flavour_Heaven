@@ -1,19 +1,16 @@
-
 import dotenv from "dotenv";
-dotenv.config(); // Must come before using process.env
-
-console.log("🌐 FRONTEND_URL from .env:", process.env.FRONTEND_URL);
+dotenv.config();
 
 import mongoose from "mongoose";
 import app from "./app.js";
 
+// Optional: fallback for local dev
+const PORT = process.env.PORT || 4000;
 
-mongoose
-  .connect(process.env.MONGO_URL)
-  .then(() => {
+mongoose.connect(process.env.MONGO_URL).then(() => {
     console.log("✅ DATABASE CONNECTED");
-    app.listen(process.env.PORT, () => {
-      console.log(`🚀 SERVER HAS STARTED AT PORT ${process.env.PORT}`);
+    app.listen(PORT, () => {
+      console.log(`🚀 Server is running on port ${PORT}`);
     });
   })
   .catch((err) => {

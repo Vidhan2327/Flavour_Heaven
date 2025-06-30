@@ -1,0 +1,213 @@
+/* ===== RESET & GLOBALS ===== */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(-45deg, #f9f9f9, #e6e6fa, #ffe4e1, #f0f8ff);
+  background-size: 400% 400%;
+  animation: gradientBG 18s ease infinite;
+  font-size: 14px;
+  color: #333;
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+
+
+/* ===== FILTER BUTTONS ===== */
+.menu-btn-group {
+  display: flex;
+  justify-content: center;         
+  align-items: center;
+  flex-wrap: wrap;                 
+  gap: 12px;
+  max-width: 1000px;
+  margin: 0 auto;                  
+  padding: 0 20px;
+  text-align: center;
+}
+
+
+.menu-btn-group__item {
+  padding: 0.8rem 1.6rem;
+  background: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  border: none;
+  color: #444;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  outline: none;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.menu-btn-group__item:hover,
+.menu-btn-group__item--active {
+  background: linear-gradient(90deg, #6c63ff, #b76df2);
+  color: #fff;
+  box-shadow: 0 6px 12px rgba(108, 99, 255, 0.3);
+}
+
+.menu-btn-group__item::after {
+  content: "✔️";
+  opacity: 0;
+  transform: translateY(8px);
+  margin-left: 0.4rem;
+  position: absolute;
+  transition: all 0.2s ease;
+}
+
+.menu-btn-group__item--active::after {
+  opacity: 1;
+  transform: translateY(-2px);
+}
+
+/* ===== CARD GRID LAYOUT ===== */
+.menu-card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+  padding: 40px 20px;
+  justify-content: center;
+  align-items: stretch;
+}
+
+/* ===== CARD WRAPPER ===== */
+.menu-card-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+/* ===== CARD ===== */
+.menu-card {
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  transition: all 0.4s ease;
+  width: 100%;
+  max-width: 450px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  border: 1px solid #ececec;
+}
+
+.menu-card:hover {
+  transform: scale(1.025) translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* ===== CARD IMAGE ===== */
+.menu-card img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  border-bottom: 1px solid #eee;
+}
+
+/* ===== CARD BODY ===== */
+.menu-card-body {
+  padding: 20px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.menu-card-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 26px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #111;
+  text-transform: capitalize;
+}
+
+.menu-card-description {
+  font-size: 14px;
+  color: #555;
+  flex-grow: 1;
+  margin: 10px 0;
+  line-height: 1.6;
+}
+
+.menu-card-author {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #777;
+  margin-top: 10px;
+}
+
+/* ===== READ MORE ===== */
+.menu-card-read {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 4px;
+  color: #6c63ff;
+  cursor: pointer;
+  margin-top: 20px;
+  text-transform: uppercase;
+  text-align: right;
+  position: relative;
+}
+
+.menu-card-read::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 60%;
+  height: 1px;
+  background-color: #c5b2fc;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+/* ===== ORDER NOW TAG ===== */
+.menu-card-tag {
+  align-self: flex-end;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 12px;
+  background-color: #f2f2f2;
+  color: #444;
+  border: 1px solid #ccc;
+  margin: 10px 20px;
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+.menu-card-tag:hover {
+  background: #6c63ff;
+  color: #fff;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .menu-card-container {
+    grid-template-columns: 1fr;
+    padding: 20px;
+    gap: 30px;
+  }
+
+  .menu-btn-group__item {
+    padding: 0.8rem 1.2rem;
+    font-size: 13px;
+  }
+}
