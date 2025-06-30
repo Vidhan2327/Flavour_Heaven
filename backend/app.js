@@ -6,6 +6,9 @@ import { errorMiddleware } from "./middlewares/error.js";
 
 dotenv.config();
 
+// ✅ Console log outside the object to debug env
+console.log("Frontend URL is:", process.env.FRONTEND_URL);
+
 const app = express();
 
 const corsOptions = {
