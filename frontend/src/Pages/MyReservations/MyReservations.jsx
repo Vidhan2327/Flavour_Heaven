@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
-import "./MyReservations.css"; // Assuming updated CSS with `lt-reservation-*` is here
+import "./reservationPageStyles.css"; // Assuming updated CSS with `lt-reservation-*` is here
 
 const MyReservations = () => {
   const [email, setEmail] = useState("");

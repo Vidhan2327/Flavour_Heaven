@@ -1,0 +1,82 @@
+.lt-reservation-container {
+  max-width: 600px;
+  margin: 80px auto;
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+}
+
+.lt-reservation-container h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #1e293b;
+  text-decoration: none;
+}
+
+.lt-reservation-input {
+  width: 100%;
+  padding: 12px 16px;
+  margin-bottom: 20px;
+  font-size: 16px;
+  border: 2px solid #cbd5e1;
+  border-radius: 8px;
+  outline: none;
+  transition: border 0.3s;
+  text-decoration: none;
+}
+
+.lt-reservation-input:focus {
+  border-color: #0ea5e9;
+}
+
+.lt-reservation-button {
+  padding: 12px 20px;
+  background-color: #0ea5e9;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s;
+  text-decoration: none;
+}
+
+.lt-reservation-button:hover {
+  background-color: #0284c7;
+}
+
+.lt-reservation-button:disabled {
+  background-color: #94a3b8;
+  cursor: not-allowed;
+}
+
+.lt-reservation-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 30px;
+  text-align: left;
+}
+
+.lt-reservation-item {
+  background-color: #f1f5f9;
+  padding: 16px;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.lt-reservation-item strong {
+  color: #1e293b;
+  text-decoration: none;
+}
+
+.lt-reservation-message {
+  margin-top: 20px;
+  color: #64748b;
+  font-size: 16px;
+  text-decoration: none;
+}
